@@ -1,0 +1,22 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All our Flats <%= (@flats.count) %></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="flat-card">
+        <div class="flat-card-image" style="background-image: url("https://images.unsplash.com/photo-1566297475196-4d41ee8f4b1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80")">
+          <p> <% @flats.each do |flat| %> </p>
+          <p> <%= flat.name %> </p>
+          <p> <%= flat.address %> </p>
+          <p> <%= flat.description %> </p>
+          <p> <%= flat.price_per_night %> </p>
+          <p> <%= flat.number_of_guests %> </p>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
